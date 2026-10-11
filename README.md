@@ -2,7 +2,7 @@
 
 Add paid text, dropdown, and checkbox options to products (engraving, gift wrap, size upgrades) -- flat pricing only, no formula evaluation.
 
-- **WordPress.org:** https://wordpress.org/plugins/hdwebmobile-product-options/
+- **WordPress.org:** https://wordpress.org/plugins/hdwebmobile-product-options-add-ons/
 - **Requires:** WordPress 6.9+, WooCommerce, PHP 7.4+
 - **License:** GPLv2 or later
 
@@ -26,7 +26,7 @@ Every price is a flat amount you enter yourself and it's looked up fresh from th
 Standard WordPress plugin structure:
 
 ```
-hdwebmobile-product-options.php    Bootstrap
+hdwebmobile-product-options-add-ons.php    Bootstrap
 includes/class-hdpo-activator.php
 includes/class-hdpo-admin.php
 includes/class-hdpo-cart.php

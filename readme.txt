@@ -34,7 +34,7 @@ Every price is a flat amount you enter yourself and it's looked up fresh from th
 
 == Installation ==
 
-1. Upload the plugin files to the `/wp-content/plugins/hdwebmobile-product-options` directory, or install the plugin through the WordPress plugins screen directly.
+1. Upload the plugin files to the `/wp-content/plugins/hdwebmobile-product-options-add-ons` directory, or install the plugin through the WordPress plugins screen directly.
 2. Activate the plugin through the 'Plugins' screen in WordPress. WooCommerce must already be installed and active.
 3. Edit a simple product, open the new "Options & Add-ons" tab under Product Data, and add your options.
 
