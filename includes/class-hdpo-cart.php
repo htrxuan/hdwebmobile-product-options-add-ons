@@ -162,12 +162,22 @@ class HDPO_Cart
 
     private static function get_submitted_options()
     {
-        // phpcs:ignore WordPress.Security.NonceVerification.Missing -- WooCommerce's own add-to-cart nonce/session flow is verified upstream (WC_Form_Handler / Store API CartController) before these hooks fire; individual field values are sanitized per-type in resolve_selection() below.
         if (!isset($_POST['hdpo_options']) || !is_array($_POST['hdpo_options'])) {
             return array();
         }
 
-        // phpcs:ignore WordPress.Security.NonceVerification.Missing, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- see justification above; raw values are only ever used as array lookup keys or re-sanitized per-type in resolve_selection().
+        if (
+            !isset($_POST['hdpo_add_to_cart_nonce'])
+            || !wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['hdpo_add_to_cart_nonce'])), 'hdpo_add_to_cart')
+        ) {
+            // No valid nonce from our own render_fields() output -- treat as if nothing was
+            // submitted rather than trusting it. A required option then simply fails its own
+            // is_value_filled() check further up the call chain, exactly as if the shopper had
+            // left it blank; this never blocks an add-to-cart that has no options to begin with.
+            return array();
+        }
+
+        // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- nonce-verified above; every value is re-sanitized per its group's own type (text/select/checkbox) in resolve_selection() before use, and raw values are otherwise only ever used as array lookup keys.
         return wp_unslash($_POST['hdpo_options']);
     }
 

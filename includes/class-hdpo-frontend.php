@@ -44,6 +44,8 @@ class HDPO_Frontend
             return;
         }
 
+        wp_nonce_field('hdpo_add_to_cart', 'hdpo_add_to_cart_nonce');
+
         echo '<div class="hdpo-options">';
         foreach ($groups as $index => $group) {
             $this->render_group($index, $group);
@@ -99,7 +101,7 @@ class HDPO_Frontend
                             <?php
                             echo esc_html($choice['label']);
                             if ((float) $choice['price'] > 0) {
-                                echo ' (+' . wp_strip_all_tags(wc_price($choice['price'])) . ')'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- wp_strip_all_tags() strips markup, leaving plain text.
+                                echo esc_html(' (+' . wp_strip_all_tags(wc_price($choice['price'])) . ')');
                             }
                             ?>
                         </option>

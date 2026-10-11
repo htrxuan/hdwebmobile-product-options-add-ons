@@ -212,7 +212,7 @@ class HDPO_Admin
             return;
         }
 
-        // phpcs:ignore WordPress.Security.NonceVerification.Missing, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- nonce verified above; every field is sanitized per-type inside HDPO_Options::save_options().
+        // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- nonce verified above (wp_verify_nonce check a few lines up); every field is sanitized per its declared type (sanitize_text_field for labels, a type whitelist, wc_format_decimal for prices) inside HDPO_Options::save_options() before it is ever persisted or read back.
         $groups = isset($_POST['hdpo_options']) && is_array($_POST['hdpo_options']) ? wp_unslash($_POST['hdpo_options']) : array();
 
         HDPO_Options::save_options($post_id, $groups);
