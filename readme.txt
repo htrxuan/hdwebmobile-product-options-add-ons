@@ -32,6 +32,9 @@ Every price is a flat amount you enter yourself and it's looked up fresh from th
 * No conditional logic between options (e.g. showing one option only when another has a specific value)
 * Options are configured per product -- there's no shared, reusable option set applied across multiple products in this version
 
+= Enjoying this plugin? =
+If it helps your site, please consider [leaving an honest review on WordPress.org](https://wordpress.org/support/plugin/hdwebmobile-product-options-add-ons/reviews/#new-post) -- it helps other WordPress users find it. Found a problem or have an idea? Please [open a support topic](https://wordpress.org/support/plugin/hdwebmobile-product-options-add-ons/) first so it can be fixed.
+
 == Installation ==
 
 1. Upload the plugin files to the `/wp-content/plugins/hdwebmobile-product-options-add-ons` directory, or install the plugin through the WordPress plugins screen directly.
