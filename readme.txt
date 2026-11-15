@@ -5,7 +5,7 @@ Tags: woocommerce, product options, product add-ons, custom fields, price adjust
 Requires at least: 6.9
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 Requires Plugins: woocommerce
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -63,6 +63,9 @@ The chosen options and their price adjustments show on the cart, Mini-Cart, and 
 4. The selected options shown on the admin Edit Order screen.
 
 == Changelog ==
+
+= 1.0.1 =
+* The WooCommerce > HDWebmobile Overview page now has a short introduction to Store Guardian, a separate paid plugin that test-buys from your checkout every hour. It is hidden once Store Guardian is active. No changes to this plugin's own features.
 
 = 1.0.0 =
 * Initial release: text/dropdown/checkbox product options with flat price adjustments, live price preview, server-side required-option enforcement, server-side re-validation of every submitted option against the product's current configuration.

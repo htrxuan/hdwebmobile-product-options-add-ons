@@ -4,7 +4,7 @@
  * Plugin Name: HDWebmobile Product Options & Add-ons
  * Plugin URI: https://hdwebmobile.com/plugins/hdwebmobile-product-options-add-ons/
  * Description: Let customers add paid extras to a product (engraving, gift wrap, size upgrades) with text, dropdown, and checkbox options. Flat-amount pricing only, no formula evaluation.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: htrxuan - Han Tran
  * Author URI: https://hdwebmobile.com/
  * License: GPLv2 or later
@@ -22,7 +22,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-define('HDPO_VERSION', '1.0.0');
+define('HDPO_VERSION', '1.0.1');
 define('HDPO_PLUGIN_FILE', __FILE__);
 define('HDPO_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('HDPO_PLUGIN_URL', plugin_dir_url(__FILE__));
