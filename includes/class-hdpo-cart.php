@@ -11,9 +11,8 @@ if (!defined('ABSPATH')) {
  * (raw text, a checkbox flag, or a choice index) -- never a price. Every price used here is
  * looked up fresh from the product's own _hdpo_options meta via HDPO_Options, so a tampered
  * request (fabricated group index, out-of-range choice index) is simply ignored rather than
- * trusted. This is a deliberate design constraint, not an oversight: it's the direct fix for the
- * class of vulnerability where a competing plugin's unsafe custom-pricing-formula evaluation led
- * to a critical RCE (CVE-2026-4001) -- this plugin has no formula evaluation of any kind.
+ * trusted. This is a deliberate design constraint, not an oversight: this plugin has no
+ * custom-pricing-formula evaluation of any kind, so there is no code-execution surface there.
  */
 class HDPO_Cart
 {
